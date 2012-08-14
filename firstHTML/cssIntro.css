@@ -23,6 +23,14 @@ li
 		margin-top: 15px;
 	}
 
+.destinations
+	{
+		width: 600px;
+		margin-left: 350px;
+		padding-left:50px;
+		margin-top: 15px;
+	}
+
 table
 	{
 		color: #666;
@@ -67,25 +75,31 @@ table tr:first-child th:first-child
 		
 	}
 
+/*To align all timespans in the first column to the right*/
 table tr:not(:first-child) th:first-child
 	{
 		text-align: right;
 	}
 
+/*round corner in the top right corner*/
 table tr:first-child th:last-child
 	{
 		border-top-right-radius: 10px;
 	}
 	
+/*round corner in the bottom left corner*/
 table tr:last-child th:first-child
 	{
 		border-bottom-left-radius: 10px;
 	}
 
+/*round corner in the bottom right corner*/
 table tr:last-child td:last-child
 	{
 		border-bottom-right-radius: 10px;
 	}
+
+/*round corner in the top left corner*/
 table tr:nth-child(2) td:nth-child(2)
 	{
 		border-top-left-radius: 10px;
