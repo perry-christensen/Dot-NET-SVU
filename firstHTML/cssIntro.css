@@ -1,0 +1,92 @@
+div	
+	{
+		color: maroon;
+		background: #DDD;
+	}
+	
+body
+	{
+		background: #df34ec;
+	}
+	
+li
+	{
+		color: blue;
+	}
+
+.introduction
+	{
+		width: 200px;
+		float:left;
+		margin-right:100px;
+		padding-left: 50px;
+		margin-top: 15px;
+	}
+
+table
+	{
+		color: #666;
+		background: #ddd;
+		position: absolute;
+		top: 450px;
+		left: 150px;
+		border-radius:20px;
+		border-spacing: 0px;
+		border: 1px solid black;
+	}
+
+td, tr, th
+	{
+		padding: 5px;
+		/*border: 1px solid black;*/
+		
+	}
+	
+tr, th
+	{
+		border-color: black;
+	}
+	
+th
+	{
+		background-color: #ddd;
+		width: 100px;
+	}
+	
+td
+	{
+		background: white;
+		text-align: center;
+	}
+	
+table tr:first-child th:first-child
+	{
+		border-top-left-radius: 10px;
+		border-top: 1px solid black;
+		border-left: 1px solid black;
+		
+	}
+
+table tr:not(:first-child) th:first-child
+	{
+		text-align: right;
+	}
+
+table tr:first-child th:last-child
+	{
+		border-top-right-radius: 10px;
+	}
+	
+table tr:last-child th:first-child
+	{
+		border-bottom-left-radius: 10px;
+	}
+
+table tr:last-child td:last-child
+	{
+		border-bottom-right-radius: 10px;
+	}
+table tr:nth-child(2) td:nth-child(2)
+	{
+		border-top-left-radius: 10px;
+	}
