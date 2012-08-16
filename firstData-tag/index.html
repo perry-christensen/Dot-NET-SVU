@@ -1,0 +1,67 @@
+<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> -->
+<html>
+	<head>
+		<title>data-tags for beginners</title>
+		<!-- <meta http-equiv="content-type" content="text/html;charset=UTF-8" /> -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var globalObject="";
+				
+				//This method replaces the data-attributevalues in the currentObject with the data-attributevalues in the savedObject
+				//In addition, it also replace the text displayed in the browser.
+				//NOTE that when using the firebug-tool (F12) in firefox, you can't see the actual changes of the attributes for some reason.
+				function copy(currentObject, savedObject){
+					$(currentObject).data("allowcopy", $(savedObject).data("allowcopy"));	//$(currentObject).attr("allowcopy", $(savedObject).data("data-allowcopy"));
+					$(currentObject).data("safe", $(savedObject).data("safe"));				//$(currentObject).attr("safe", $(savedObject).data("data-safe"));
+					$(currentObject).data("force", $(savedObject).data("force"));			//$(currentObject).attr("force", $(savedObject).data("data-force"));
+					$(currentObject).html($(savedObject).text());							//Notice the SUBTLE difference between .attr and .data methods! They do the same, but in .attr you have to write the full
+				}																			//dataattribute-tag (e.g. data-force, data-allowcopy etc.)
+				
+				//If the object we are trying to copy to the currentObjects place has a force value AND we are allowed to copy it 
+				//OR if the currentObject isn't safe (i.e overwritable) AND we are allowed to copy the object we are trying to copy,
+				//then copy the savedObject to the currentObjects space (i.e. replace the current text with the 'stored' text)
+				function change(currentObject, savedObject){
+					//replace the currentObject with the savedObject
+					if($(savedObject).data("force") && $(savedObject).data("allowcopy") || !$(currentObject).data("safe") && $(savedObject).data("allowcopy"))
+					{
+						copy(currentObject, savedObject);
+					}
+				}
+				
+				//This function tests whether the click is a 'copy'-click or a 'paste'-click
+				//If copying, set the global variable to the event.target object (i.e. the line of text clicked)
+				//If pasting, call the change method and reset the globally stored object.
+				$(document).on("click", function(event){
+					if(globalObject!="")
+					{
+						change($(event.target), globalObject);
+						globalObject="";
+					}
+					else
+					{
+						globalObject = $(event.target);
+					}
+				});
+			});
+		</script>
+		<style type="text/css">
+			
+		</style>
+		<link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div data-safe=true data-allowCopy=false data-force=false>
+			I have some nice text here.
+		</div>
+		<div data-safe=false data-allowCopy=false data-force=false>
+			I don't like my text..
+		</div>
+		<div data-safe=true data-allowCopy=true data-force=false>
+			I love to share my text with others.
+		</div>
+		<div data-safe=true data-allowCopy=true data-force=true>
+			HA... I WILL OVERWRITE YOU!!
+		</div>
+	</body>
+</html>
