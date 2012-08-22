@@ -1,0 +1,13 @@
+<xml>
+	<robot>
+		<navn></navn>
+		<runder>
+			<runde skjold="" vaaben=""/>
+			<runde skjold="" vaaben=""/>
+		</runder>
+		<tab></tab>
+		<sejre></sejre>
+		<liv></liv>
+		<uafgjort></uafgjort>
+	</robot>
+<xml>
