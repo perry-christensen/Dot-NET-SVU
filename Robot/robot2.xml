@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<robot>
-		<navn>Player 1</navn>
+		<navn>Player 2</navn>
 		<runder>
 			<runde skjold="1" vaaben="2"/>
 			<runde skjold="2" vaaben="3"/>
+			<runde skjold="3" vaaben="1"/>
 		</runder>
 		<tab>0</tab>
 		<sejre>5</sejre>
