@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<robot>
+  <navn>Player one</navn>
+  <runder>
+    <runde skjold="1" vaaben="2" />
+    <runde skjold="2" vaaben="3" />
+  </runder>
+  <tab>0</tab>
+  <sejre>6</sejre>
+  <liv>5</liv>
+  <uafgjort>1</uafgjort>
+</robot>
