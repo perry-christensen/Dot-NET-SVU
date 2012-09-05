@@ -1,0 +1,75 @@
+﻿body 
+{
+    background-color: Aqua;
+}
+
+#wrapper
+{
+    width: 100%;
+    height: 100%;
+}
+
+#toh
+{
+    width: 80%;
+    height: 50%;
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+#control
+{
+    
+}
+
+.vertical
+{
+    height: 80%;
+    width: 3px;
+    background: Black;
+    border: 1px solid black;
+    position:relative;
+    top: 15%;
+    left: 50%;
+}
+
+.horisontal
+{
+    height: 3px;
+    width: 70%;
+    background: Black;
+    border: 1px solid black;
+    position: relative;
+    top: 95%;
+    left: 15%;
+}
+
+.peg
+{
+    height: 100%;
+    width: 33.3%;
+}
+
+#pegA, #pegB, #pegC
+{
+    float: left;
+}
+
+#pegB
+{
+    left: 33%;
+}
+
+#pegC
+{
+    left:66%;
+}
+    
+#a, #b, #c
+{    
+    float: left;
+    left: 50%;
+}
