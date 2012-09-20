@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MasterTemplate.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    <asp:Image ID="Image1" src="/Images/cooltext769452481.png" runat="server" /><!--Moeslund/Christensens hjemmeside-->
+                </h1>
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Forsiden"/>
+                        <asp:MenuItem NavigateUrl="~/Perry.aspx" Text="Perry"/>
+                        <asp:MenuItem NavigateUrl="~/Sabine.aspx" Text="Sabine"/>
+                        <asp:MenuItem NavigateUrl="~/Lejlighed.aspx" Text="Lejlighed"/>
+                        <asp:MenuItem NavigateUrl="~/Dykning.aspx" Text="Dykning"/>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        <span class="footerspan">
+            <span>MoeslundChristensen.dk</span>
+            <span>Ålekistevej 58 st. tv.</span>
+            <span>DK-2720 Vanløse</span>
+            <span>mobil: +45 60 77 88 40 </span>
+        </span>
+        <span class="emailspan">
+            <a class="emailadr" href="mailto:send_flere_penge@hotmail.com">send_flere_penge@hotmail.com </a>
+        </span>
+    </div>
+    </form>
+</body>
+</html>
